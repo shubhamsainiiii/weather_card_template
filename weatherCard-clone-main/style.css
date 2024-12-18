@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f8ff;
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.weather-card {
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.clear-sky {
+    background: linear-gradient(to right, #f9d423, #ff4e50);
+}
+
+.overcast {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+.thunderstorm {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+.weather-card .temp {
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.weather-card .temp span {
+    font-size: 28px;
+    margin-left: 5px;
+}
+
+.weather-card .details {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.weather-card .details span {
+    display: block;
+    margin-top: 5px;
+    opacity: 0.85;
+}
+
+.weather-icon {
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.9);
+}
